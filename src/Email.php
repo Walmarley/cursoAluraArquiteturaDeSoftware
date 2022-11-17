@@ -8,9 +8,9 @@ class Email
 
     public function __construct(string $endereco)
     {
-        $this->endereco = $endereco;
-        if(filter_var($endereco, FILTER_VALIDATE_EMAIL) === false) {
-            throw new \InvalidArgumentException('Endereço de e-mail invalido'
+        if (filter_var($endereco, FILTER_VALIDATE_EMAIL) === false) {
+            throw new \InvalidArgumentException(
+                'Endereço de e-mail inválido'
             );
         }
 
